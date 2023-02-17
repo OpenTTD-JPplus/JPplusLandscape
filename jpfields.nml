@@ -1,0 +1,131 @@
+grf {
+ grfid: "JK\70\01";
+ name: string(STR_GRF_NAME);
+ desc: string(STR_GRF_DESCRIPTION);
+ version: 25;
+ min_compatible_version: 1;
+
+
+}
+
+
+template template_slopeawarecrops (x,y,filename) {
+    [x+16, y+8, 64, 37, -31, -6, ANIM, filename]
+    [x+96, y+8, 64, 37, -31, -6, ANIM, filename]
+    [x+176, y+8, 64, 29, -31, -6, ANIM, filename]
+    [x+256, y+8, 64, 29, -31, -6, ANIM, filename]
+    [x+336, y+8, 64, 37, -31, -6, ANIM, filename]
+    [x+416, y+8, 64, 37, -31, -6, ANIM, filename]
+    [x+496, y+8, 64, 29, -31, -6, ANIM, filename]
+    [x+576, y+8, 64, 29, -31, -6, ANIM, filename]
+    [x+656, y+8, 64, 45, -31, -14, ANIM, filename]
+    [x+736, y+8, 64, 45, -31, -14, ANIM, filename]
+    [x+816, y+8, 64, 37, -31, -14, ANIM, filename]
+    [x+896, y+8, 64, 37, -31, -14, ANIM, filename]
+    [x+976, y+8, 64, 45, -31, -14, ANIM, filename]
+    [x+1056, y+8, 64, 45, -31, -14, ANIM, filename]
+    [x+1136, y+8, 64, 37, -31, -14, ANIM, filename]
+    [x+1216, y+8, 64, 53, -31, -21, ANIM, filename]
+    [x+1296, y+8, 64, 21, -31, -6, ANIM, filename]
+    [x+1376, y+8, 64, 37, -31, -14, ANIM, filename]
+    [x+1456, y+8, 64, 37, -31, -14, ANIM, filename]
+	
+}
+
+
+template template_flat_high(x,y,filename) {
+    [x+14, y+2, 64, 94, -31, -63, filename]
+    [x+89, y+2, 64, 94, -31, -63, filename]
+    [x+164, y+2, 64, 94, -31, -63, filename]
+    [x+239, y+2, 64, 94, -31, -63, filename]
+}
+
+
+
+
+ // replace farm fields
+ //1
+ replace farm_fields_1(4126, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,0,"gfx/slopecrops1.png")
+ }
+ 
+ //2
+ replace farm_fields_2(4145, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,0,"gfx/slopecrops2.png")
+ }
+ 
+ //3
+ replace farm_fields_3(4164, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,0,"gfx/slopecrops3.png")
+ }
+ 
+ //4
+ replace farm_fields_4(4183, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,0,"gfx/slopecrops4.png")
+ }
+ 
+ //5
+ replace farm_fields_5(4202, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,0,"gfx/slopecrops1.png")
+ }
+ 
+ //6
+ replace farm_fields_6(4221, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,70,"gfx/slopecrops1.png")
+ }
+
+ //7
+ replace farm_fields_7(4240, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,70,"gfx/slopecrops2.png")
+ }
+
+ //8
+ replace farm_fields_8(4259, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,70,"gfx/slopecrops3.png")
+ }
+
+ //9
+ replace farm_fields_9(4278, "gfx/rails_overlays.png") {
+ 		template_slopeawarecrops(0,70,"gfx/slopecrops4.png")
+ }
+
+
+//fences
+
+replace spr4090(4090, "gfx/field_fences.png") { [ 514,   10,  33,  20, -30,  12] }
+replace spr4091(4091, "gfx/field_fences.png") { [ 562,   10,  33,  20,   0,  11] }
+replace spr4092(4092, "gfx/field_fences.png") { [ 610,   10,  33,  28, -30,   4] }
+replace spr4093(4093, "gfx/field_fences.png") { [ 658,   10,  33,  28,   0,   3] }
+replace spr4094(4094, "gfx/field_fences.png") { [ 706,   10,  33,  12, -30,  20] }
+replace spr4095(4095, "gfx/field_fences.png") { [ 754,   10,  33,  12,   0,  19] }
+replace spr4096(4096, "gfx/field_fences.png") { [   2,   74,  33,  20, -30,  11] }
+replace spr4097(4097, "gfx/field_fences.png") { [  50,   74,  33,  20,   0,  11] }
+replace spr4098(4098, "gfx/field_fences.png") { [  98,   74,  33,  28, -30,   4] }
+replace spr4099(4099, "gfx/field_fences.png") { [ 146,   74,  33,  28,   0,   3] }
+replace spr4100(4100, "gfx/field_fences.png") { [ 194,   74,  33,  12, -30,  19] }
+replace spr4101(4101, "gfx/field_fences.png") { [ 242,   74,  33,  12,   0,  19] }
+replace spr4102(4102, "gfx/field_fences.png") { [ 290,   74,  32,  20, -31,  11] }
+replace spr4103(4103, "gfx/field_fences.png") { [ 338,   74,  32,  20,   1,  11] }
+replace spr4104(4104, "gfx/field_fences.png") { [ 386,   74,  33,  28, -31,   3] }
+replace spr4105(4105, "gfx/field_fences.png") { [ 434,   74,  33,  28,   1,   3] }
+replace spr4106(4106, "gfx/field_fences.png") { [ 482,   74,  33,  10, -31,  20] }
+replace spr4107(4107, "gfx/field_fences.png") { [ 530,   74,  33,  10,   1,  20] }
+replace spr4108(4108, "gfx/field_fences.png") { [ 578,   74,  33,  20, -30,  12] }
+replace spr4109(4109, "gfx/field_fences.png") { [ 626,   74,  33,  20,   0,  11] }
+replace spr4110(4110, "gfx/field_fences.png") { [ 674,   74,  33,  28, -30,   3] }
+replace spr4111(4111, "gfx/field_fences.png") { [ 722,   74,  33,  28,   0,   2] }
+replace spr4112(4112, "gfx/field_fences.png") { [   2,  122,  33,  12, -30,  19] }
+replace spr4113(4113, "gfx/field_fences.png") { [  50,  122,  33,  12,   0,  19] }
+replace spr4114(4114, "gfx/field_fences.png") { [  98,  122,  33,  20, -30,  12] }
+replace spr4115(4115, "gfx/field_fences.png") { [ 146,  122,  33,  20,   0,  11] }
+replace spr4116(4116, "gfx/field_fences.png") { [ 194,  122,  33,  28, -30,   3] }
+replace spr4117(4117, "gfx/field_fences.png") { [ 242,  122,  33,  28,   0,   3] }
+replace spr4118(4118, "gfx/field_fences.png") { [ 290,  122,  33,  12, -30,  19] }
+replace spr4119(4119, "gfx/field_fences.png") { [ 338,  122,  33,  12,   0,  19] }
+replace spr4120(4120, "gfx/field_fences.png") { [ 386,  122,  33,  20, -30,  12] }
+replace spr4121(4121, "gfx/field_fences.png") { [ 434,  122,  33,  20,   0,  11] }
+replace spr4122(4122, "gfx/field_fences.png") { [ 482,  122,  33,  28, -30,   4] }
+replace spr4123(4123, "gfx/field_fences.png") { [ 530,  122,  33,  28,   0,   3] }
+replace spr4124(4124, "gfx/field_fences.png") { [ 578,  122,  33,  12, -30,  20] }
+replace spr4125(4125, "gfx/field_fences.png") { [ 626,  122,  33,  12,   0,  19] }
+
