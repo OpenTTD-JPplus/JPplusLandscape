@@ -1,9 +1,9 @@
 grf {
- grfid: "JK\70\01";
+ grfid: "JK\70\02";
  name: string(STR_GRF_NAME);
  desc: string(STR_GRF_DESCRIPTION);
- version: 25;
- min_compatible_version: 1;
+ version: 30;
+ min_compatible_version: 30;
 
 
 }
@@ -40,7 +40,17 @@ template template_flat_high(x,y,filename) {
     [x+239, y+2, 64, 94, -31, -63, filename]
 }
 
+template ground_trees(x, y) { [x, y, 40, 64, -20, -56]}
 
+template template_trees(x,y) {
+    ground_trees(  0+x,  0+y)
+    ground_trees( 48+x,  0+y)
+    ground_trees( 96+x,  0+y)
+    ground_trees(144+x,  0+y)
+    ground_trees(192+x,  0+y)
+    ground_trees(240+x,  0+y)
+    ground_trees(288+x,  0+y)
+}
 
 
  // replace farm fields
@@ -128,4 +138,20 @@ replace spr4122(4122, "gfx/field_fences.png") { [ 482,  122,  33,  28, -30,   4]
 replace spr4123(4123, "gfx/field_fences.png") { [ 530,  122,  33,  28,   0,   3] }
 replace spr4124(4124, "gfx/field_fences.png") { [ 578,  122,  33,  12, -30,  20] }
 replace spr4125(4125, "gfx/field_fences.png") { [ 626,  122,  33,  12,   0,  19] }
+
+
+//tree
+
+
+	replace (1604, "gfx/trees.png") {
+		template_trees(0,140)
+	}
+
+
+//street lights
+replace spr1406(1406, "gfx/streetlights.png") { [ 244,   10,   4,  14,   0, -13] }
+replace spr1407(1407, "gfx/streetlights.png") { [ 249,   10,   4,  14,  -4, -12] }
+
+//street tree
+replace spr4626(4626, "gfx/streettree.png") { [  50,    0,  45,  80, -20, -76] }
 
