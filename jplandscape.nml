@@ -52,6 +52,17 @@ template template_trees(x,y) {
     ground_trees(288+x,  0+y)
 }
 
+template template_road_tunnels(y) {
+	[ 113,   y,  64,  39, -31,  -8]
+	[ 193,   y,  64,  39, -31, -38]
+	[ 653,   y,  64,  23, -31,   0]
+	[ 733,   y,  64,  23, -31, -30]
+	[ 337,   y,  64,  23, -31,   0]
+	[ 417,   y,  64,  23, -31, -30]
+	[ 877,   y,  64,  39, -31,  -8]
+	[ 957,   y,  64,  39, -31, -38]
+}
+
 
  // replace farm fields
  //1
@@ -153,5 +164,33 @@ replace spr1406(1406, "gfx/streetlights.png") { [ 244,   10,   4,  14,   0, -13]
 replace spr1407(1407, "gfx/streetlights.png") { [ 249,   10,   4,  14,  -4, -12] }
 
 //street tree
-replace spr4626(4626, "gfx/streettree.png") { [  50,    0,  45,  80, -20, -76] }
+
+
+if (climate == CLIMATE_TROPICAL) { 
+	replace tree_sakura(4626, "gfx/streettree.png") { [  50,    0,  45,  80, -20, -76] }
+} else { 
+	replace tree_green(4626, "gfx/streettree.png") { [  100,    0,  45,  80, -20, -76] }
+}
+
+//road tunnels
+
+// temperate road tunnels 2389 - 2396
+replace spr2389(2389, "gfx/roadtunnel.png") { template_road_tunnels(27) }
+
+// arctic road tunnel 238 - 245
+replace spr238( 238, "gfx/roadtunnel.png") { template_road_tunnels(101) }
+
+// snowy road tunnels 2421 - 2428
+replace spr2421(2421, "gfx/roadtunnel.png") { template_road_tunnels(249) }
+
+// tropic road tunnels 226
+replace spr226( 226, "gfx/roadtunnel.png") { template_road_tunnels(175) }
+
+// desert road tunnels 509 - 516
+replace spr509( 509, "gfx/roadtunnel.png") { template_road_tunnels(322) }
+
+//2429-2436 tunnel gui
+//replace spr2429(2429, "sprites/png/gui/road_tunnels_gui.png") { [ 0,  0,  20,  20,   0,   0] } // road tunnel
+
+//replace spr2433(2433, "sprites/png/gui/road_tunnels_gui.png") { [  30,  0,  32,  32,   0,   0] }
 
