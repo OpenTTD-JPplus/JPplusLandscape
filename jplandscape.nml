@@ -2,7 +2,7 @@ grf {
  grfid: "JK\70\02";
  name: string(STR_GRF_NAME);
  desc: string(STR_GRF_DESCRIPTION);
- version: 30;
+ version: 31;
  min_compatible_version: 30;
 
 
@@ -174,20 +174,31 @@ if (climate == CLIMATE_TROPICAL) {
 
 //road tunnels
 
-// temperate road tunnels 2389 - 2396
-replace spr2389(2389, "gfx/roadtunnel.png") { template_road_tunnels(27) }
+// standard road tunnels 2389 - 2396
+replace road_tunnel(2389, "gfx/roadtunnel.png") { template_road_tunnels(27) }
+
+
+if (climate == CLIMATE_TROPICAL) { 
+    // desert road tunnels 
+    replace road_tunnel_desert( 2421, "gfx/roadtunnel.png") { template_road_tunnels(27) }
+}
+
+if (climate == CLIMATE_ARCTIC) { 
+    // snowy road tunnels 
+    replace road_tunnel_snow( 2421, "gfx/roadtunnel.png") { template_road_tunnels(249) }
+}
 
 // arctic road tunnel 238 - 245
-replace spr238( 238, "gfx/roadtunnel.png") { template_road_tunnels(101) }
+//replace spr238( 238, "gfx/roadtunnel.png") { template_road_tunnels(101) }
 
-// snowy road tunnels 2421 - 2428
-replace spr2421(2421, "gfx/roadtunnel.png") { template_road_tunnels(249) }
+// desert road tunnels 2421 - 2428
+//replace spr2421(2421, "gfx/roadtunnel.png") { template_road_tunnels(249) } //todo swap gfx
 
 // tropic road tunnels 226
-replace spr226( 226, "gfx/roadtunnel.png") { template_road_tunnels(175) }
+//replace spr226( 226, "gfx/roadtunnel.png") { template_road_tunnels(175) }
 
 // desert road tunnels 509 - 516
-replace spr509( 509, "gfx/roadtunnel.png") { template_road_tunnels(322) }
+//replace spr509( 509, "gfx/roadtunnel.png") { template_road_tunnels(322) }
 
 //2429-2436 tunnel gui
 //replace spr2429(2429, "sprites/png/gui/road_tunnels_gui.png") { [ 0,  0,  20,  20,   0,   0] } // road tunnel
